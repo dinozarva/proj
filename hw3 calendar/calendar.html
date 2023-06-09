@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="cstyle.css">
+    <!-- <script src="calendar.js"></script> -->
+
+</head>
+
+<body class="calendar">
+
+
+    <section class="part1">
+
+
+        <section class="header">
+
+            <div class="current">
+                22 March 2018
+            </div>
+
+            <div class="buttons">
+                <svg class="img1" width="20" height="20" viewBox="0 0 39 39" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M38 38L27 27" stroke="#8998B4" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31Z"
+                        stroke="#8998B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg class="img2" width="19" height="19" viewBox="0 0 38 38" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 1H15V15H1V1Z" stroke="#8998B4" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 1H37V15H23V1Z" stroke="#8998B4"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 23H15V37H1V23Z" stroke="#8998B4"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23 23H37V37H23V23Z" stroke="#8998B4"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="timetable">
+            <div class="time">
+                <div class="time-item">09:00 <div class="line"></div>
+                </div>
+                <div class="time-item">10:00 <div class="line"></div>
+                </div>
+                <div class="time-item">11:00 <div class="line"></div>
+                </div>
+                <div class="time-item">12:00 <div class="line"></div>
+                </div>
+                <div class="time-item">13:00 <div class="line"></div>
+                </div>
+                <div class="time-item">14:00 <div class="line"></div>
+                </div>
+                <div class="time-item">15:00 <div class="line"></div>
+                </div>
+                <div class="time-item">16:00 <div class="line"></div>
+                </div>
+                <div class="time-item">17:00 <div class="line"></div>
+                </div>
+                <div class="time-item">18:00 <div class="line"></div>
+                </div>
+                <div class="time-item">19:00 <div class="line"></div>
+                </div>
+                <div class="time-item">20:00 <div class="line"></div>
+                </div>
+            </div>
+            <div class="plan">
+                <div class="red-block">
+                    <div class="red-block__block1">Meet Sophia in airport</div>
+                </div>
+                <div class="blue-block">
+                    <div class="blue-block__block2">Studio workshop</div>
+                </div>
+                <div class="orange-block">
+                    <div class="orange-block__block3">Design workshop with Johny Ive</div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </section>
+
+    <section class="part2">
+        <section class="part2__date">
+            <button class="part2__btn tuda" onclick="previousMonth();" arria-label="nextmonth"><svg
+                    class="part2__btn-img" viewBox="0 0 20 38" role="img" aria-label="">
+                    <path d="M19 1L1 19L19 37" />
+                </svg>
+            </button>
+            <span class="part2__title">
+
+            </span>
+            <button class="part2__btn suda" onclick="nextMonth();" arria-label="previousmonth"><svg
+                    class="part2__btn-img reverse" viewBox="0 0 20 38" role="img" aria-label="">
+                    <path d="M19 1L1 19L19 37" />
+                </svg></button>
+        </section>
+        <div id="divCal">
+            <section class="date">
+                <div class="month">
+                </div>
+                <div class="weekdays">
+                    <div class="day1">M</div>
+                    <div class="day2">T</div>
+                    <div class="day3">W</div>
+                    <div class="day4">T</div>
+                    <div class="day5">F</div>
+                    <div class="day6">Sat</div>
+                    <div class="day7">Sun</div>
+
+                </div>
+
+                <div class="days">
+                    <div class="day1">1</div>
+                    <div class="day2">2</div>
+                    <div class="day3">3</div>
+                    <div class="day4">4</div>
+                    <div class="day5">5</div>
+                    <div class="day6">6</div>
+                    <div class="day7">7</div>
+                    <div class="day1">8</div>
+                    <div class="day2">9</div>
+                    <div class="day3">10</div>
+                    <div class="day4">11</div>
+                    <div class="day5">12</div>
+                    <div class="day6">13</div>
+                    <div class="day7">14</div>
+                    <div class="day1">15</div>
+                    <div class="day2">16</div>
+                    <div class="day3">17</div>
+                    <div class="day4">18</div>
+                    <div class="day5">19</div>
+                    <div class="day6">20</div>
+                    <div class="day7">21</div>
+                    <div class="day1">22</div>
+                    <div class="day2">23</div>
+                    <div class="day3">24</div>
+                    <div class="day4">25</div>
+                    <div class="day5">26</div>
+                    <div class="day6">27</div>
+                    <div class="day7">28</div>
+                    <div class="day1">29</div>
+                    <div class="day2">30</div>
+                    <div class="day3">31</div>
+
+                    <div class="day4" style="color: #A4B0C3;"> 1</div>
+                    <div class="day5" style="color: #A4B0C3;">2</div>
+                    <div class="day6" style="color: #A4B0C3;">3</div>
+
+
+
+                </div>
+
+            </section>
+        </div>
+
+        <section class="categories">
+            <div>Your categories</div>
+            <div class="boxes">
+                <button class="box1">FINANCE</button>
+                <button class="box2">MANAGEMENT</button>
+                <button class="box3">DESIGN</button>
+            </div>
+
+        </section>
+    </section>
+
+</body>
+<script>
+    var currentDate = new Date();
+
+    function renderCalendar() {
+        var calendar = document.getElementById('divCal');
+        calendar.innerHTML = '';
+
+        var month = currentDate.getMonth();
+        var year = currentDate.getFullYear();
+        var firstDay = new Date(year, month, 1);
+        var lastDay = new Date(year, month + 1, 0);
+
+        var table = document.createElement('section');
+        table.classList.add('date');
+        // Создаем заголовок таблицы с названием месяца и года
+        var monthYearRow = document.createElement('div');
+        monthYearRow.classList.add('month');
+        // var monthYearCell = document.createElement('th');
+        // monthYearCell.setAttribute('colspan', '7');
+        monthYearRow.textContent = getMonthName(month) + ' ' + year;
+        // monthYearRow.appendChild(monthYearRow);
+        table.appendChild(monthYearRow);
+        // Создаем заголовок таблицы с названиями дней недели
+        var weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fr', 'Sat'];
+
+        var tr = document.createElement('div');
+        tr.classList.add('weekdays');
+        var j = 0;
+        for (var i = 0; i < weekdays.length; i++) {
+            var th = document.createElement('div');
+            j = i + 1;
+            th.classList.add('day' + j);
+            th.textContent = weekdays[i];
+            tr.appendChild(th);
+        }
+        table.appendChild(tr);
+
+        var days = document.createElement('div');
+        days.classList.add('days');
+
+        // Создаем ячейки с днями месяца
+        var currentRow;
+        var date = 1;
+        last_date = 0;
+        for (var week = 0; week < 6; week++) {
+            // currentRow = document.createElement('tr');
+            var j = 1;
+            for (var day = 0; day < 7; day++) {
+                var div_day = document.createElement('div');
+                div_day.classList.add('day' + j);
+                if (week === 0 && day < firstDay.getDay()) {
+                    // Пустые ячейки для дней предыдущего месяца
+                    div_day.textContent = getDaysInPreviousMonth() - (firstDay.getDay() - day - 1);
+                    div_day.classList.add('not_current');
+                } else if (date > lastDay.getDate()) {
+                    // Пустые ячейки для дней следующего месяца
+                    if (week === 4) {
+                        div_day.textContent = date - lastDay.getDate();
+                        var last_date = date - lastDay.getDate()
+                        date++;
+                        div_day.classList.add('not_current');
+                    } else if (week === 5) {
+                        last_date++;
+                        div_day.textContent = last_date;
+                        div_day.classList.add('not_current');
+                    }
+
+                } else {
+                    // Ячейки с днями текущего месяца
+                    div_day.textContent = date;
+                    if (date === currentDate.getDate()) {
+                        // Выделение текущего дня
+                        div_day.classList.add('current');
+                    }
+                    date++;
+                }
+                j++;
+                days.appendChild(div_day);
+            }
+            // table.appendChild(currentRow);
+        }
+        table.appendChild(days);
+        // table.appendChild(thead);
+        // table.appendChild(tbody);
+        calendar.appendChild(table);
+        // // Создаем ячейки с днями месяца
+        // var currentRow;
+        // var date = 1;
+        // for (var week = 0; week < 6; week++) {
+        //     currentRow = document.createElement('tr');
+        //     for (var day = 0; day < 7; day++) {
+        //         var td = document.createElement('td');
+        //         if (week === 0 && day < firstDay.getDay()) {
+        //             // Пустые ячейки для дней предыдущего месяца
+        //             td.textContent = '';
+        //         } else if (date > lastDay.getDate()) {
+        //             // Пустые ячейки для дней следующего месяца
+        //             td.textContent = '';
+        //         } else {
+        //             // Ячейки с днями текущего месяца
+        //             td.textContent = date;
+        //             if (date === currentDate.getDate()) {
+        //                 // Выделение текущего дня
+        //                 td.classList.add('current');
+        //             }
+        //             date++;
+        //         }
+        //         currentRow.appendChild(td);
+        //     }
+        //     table.appendChild(currentRow);
+        // }
+        //
+        // // table.appendChild(thead);
+        // // table.appendChild(tbody);
+        // calendar.appendChild(table);
+    }
+
+    function previousMonth() {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    }
+
+    function nextMonth() {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    }
+    function getMonthName(month) {
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        return monthNames[month];
+    }
+
+    renderCalendar();
+    function getDaysInPreviousMonth() {
+        var currentDate = new Date();
+        var previousMonth = currentDate.getMonth() - 1;
+        var year = currentDate.getFullYear();
+
+        if (previousMonth < 0) {
+            // Если текущий месяц январь, нужно перейти к декабрю предыдущего года
+            previousMonth = 11; // Декабрь
+            year--;
+        }
+
+        var lastDayOfPreviousMonth = new Date(year, previousMonth + 1, 0);
+        return lastDayOfPreviousMonth.getDate();
+    }
+</script>
+
+
+</html>
